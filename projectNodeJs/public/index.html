@@ -45,19 +45,10 @@
         <h1>Main Page</h1>
         <p>General info about the product.</p>
         <a href="/form">Request Product</a>
-        <button id="allProductsBtn">All Products</button>
+        <a href="/api/products">All Product</a>
         <a href="/add-product">Add Product</a>
     </div>
     
-    <script>
-        document.getElementById('allProductsBtn').addEventListener('click', function() {
-            fetch('/api/products')
-                .then(response => response.json())
-                .then(products => {
-                    alert(JSON.stringify(products, null, 2));
-                })
-                .catch(error => console.error('Error fetching products:', error));
-        });
-    </script>
+    
 </body>
 </html>
